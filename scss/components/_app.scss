@@ -1,0 +1,19 @@
+.card-active{
+    padding: 32px;
+    border-radius: 16px;
+    color: white;
+    background-color: #0C27BE;
+}
+.card-active small {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.card-active .heading {
+    font-size: 28px;
+    font-weight: 400;   
+    margin-top: 32px; 
+}
+.card-active .heading span {
+    font-weight: 700;  
+}

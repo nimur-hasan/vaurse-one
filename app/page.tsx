@@ -1,95 +1,55 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import '../scss/index.scss'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='container'>
+
+      {/* Page Header Start ➕ */}    
+      <div className="d-flex justify-content-between align-items-center">
+        <h1>Wallet</h1>
+
+        <div className="d-flex gap-20">
+          <div className='h1 d-flex align-items-center gap-2'>
+            <span>Voscoin</span> 
+            <Link className='link-text' href={'#'}>
+            <div className='d-flex gap-1'>
+              <img src={'/assets/icons/INFO.svg'}/> 
+              <span>info</span>
+            </div>
+            </Link>
+          </div>
+
+          <button className='btn' type="button">
+            <img src="/assets/icons/CART.svg" alt="" />
+            <span>Buy Voscoin</span>
+          </button>
+        </div>       
+
+      </div>
+      {/* Page Header End ➖ */}
+
+      {/* Card Section Start ➕ */}
+      <div className="d-flex mt-16">
+        <div className="card-active position-relative" style={{width: '430px'}}>
+          <img className='position-absolute' style={{right: '0px', top: '0px'}} src="/assets/icons/CARD_ABSTRACT.svg" alt="" />
+          <div className="d-flex justify-content-between">
+            <small>Cash Balance</small>
+            <img src="/assets/icons/CARD_ICON.svg" alt="" />
+          </div>
+          <div className='heading'>USD <span>0.00</span></div>
+          <div>
+            <small>VSC 0.00</small>
+          </div>
+          <button className="btn-light mt-6">
+            <img src="/assets/icons/DOWN_ARROW.svg" alt="" />
+            Withdraw Funds
+          </button>
         </div>
       </div>
+      {/* Card Section End ➖ */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   )
 }
